@@ -1,0 +1,10 @@
+<div id="">
+id é unico e o css deste deve iniciar com #
+
+<div class="">
+class é como um tipo que varias tags podem pertercer e o css desta deve iniciar com .
+
+
+padding - margem interna
+1 valor é para horizontal
+2 valor é para vertical
