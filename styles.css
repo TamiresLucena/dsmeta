@@ -60,6 +60,10 @@ header {
     margin: 0 auto;
 }
 
+#sales {
+    padding: 40px 10px;
+}
+
 .dsmeta-sales-title {
     color: #5fb0e5;
     font-size: 24px;
@@ -130,6 +134,10 @@ header {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.dsmeta-red-btn img {
+    width: 19px;
 }
 
 .show576 {
