@@ -15,11 +15,22 @@ padding - margem interna
 ### backend ###
 
 JPA biblioteca de mapeamento relacional
+
 h2 é um banco em memória ideal para testes e estudos
 http://localhost:8080/h2-console/ - para acessar o banco no browser
 
 
 @Entity - em cima de uma classe, é pra que a classe seja equivalente a uma tabela do banco
+
+.repositories
+interfaces responsáveis pelo acesso ao banco
+exemplo: 
+    public interface SaleRepository extends JpaRepository<Sale, Long>
+    Sale tipo da entidade; Long tipo do ID da entidade
+
+.service
+camada para regras de negócio
+
 
 
 
