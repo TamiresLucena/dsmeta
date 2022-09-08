@@ -1,3 +1,5 @@
+### frontend ###
+
 <div id="">
 id é unico e o css deste deve iniciar com #
 
@@ -8,3 +10,21 @@ class é como um tipo que varias tags podem pertercer e o css desta deve iniciar
 padding - margem interna
 1 valor é para horizontal
 2 valor é para vertical
+
+
+### backend ###
+
+JPA biblioteca de mapeamento relacional
+h2 é um banco em memória ideal para testes e estudos
+http://localhost:8080/h2-console/ - para acessar o banco no browser
+
+
+@Entity - em cima de uma classe, é pra que a classe seja equivalente a uma tabela do banco
+
+
+
+### atalhos ###
+ctrl + shift + o - importa automatico
+
+
+
