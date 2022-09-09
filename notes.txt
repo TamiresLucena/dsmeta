@@ -21,6 +21,7 @@ http://localhost:8080/h2-console/ - para acessar o banco no browser
 
 
 @Entity - em cima de uma classe, é pra que a classe seja equivalente a uma tabela do banco
+@Valeu - get envs definidas no application properties
 
 .repositories
 interfaces responsáveis pelo acesso ao banco
