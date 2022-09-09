@@ -11,6 +11,10 @@ padding - margem interna
 1 valor é para horizontal
 2 valor é para vertical
 
+useEffect - quando alterar um valor x execute a função y
+
+axios - lib pra chamar endpoints
+
 
 ### backend ###
 
