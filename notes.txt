@@ -35,6 +35,7 @@ props é como se fossem parametros que um componente react recebe.
 ### backend ###
 
 JPA biblioteca de mapeamento relacional
+é o ORM do java neste caso
 
 h2 é um banco em memória ideal para testes e estudos
 http://localhost:8080/h2-console/ - para acessar o banco no browser
