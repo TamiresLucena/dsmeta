@@ -16,6 +16,22 @@ useEffect - quando alterar um valor x execute a função y
 axios - lib pra chamar endpoints
 
 
+useEffect(() => {
+    const dmin = minDate.toISOString().slice(0, 10);
+    const dmax = maxDate.toISOString().slice(0, 10);
+
+    axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
+        .then(response => {
+            setSales(response.data.content);
+        })
+}, [minDate, maxDate]);  
+
+os colchetes por ultimo aqui são pra indicar quais são as variaveis que ao sofrerem alteração devem refazer a chamada a API
+
+
+props é como se fossem parametros que um componente react recebe.
+
+
 ### backend ###
 
 JPA biblioteca de mapeamento relacional
