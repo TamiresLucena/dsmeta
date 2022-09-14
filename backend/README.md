@@ -1,20 +1,10 @@
-# ![DevSuperior logo](https://raw.githubusercontent.com/devsuperior/bds-assets/main/ds/devsuperior-logo-small.png) Semana Spring React - Episódio 2
->  *Crie um app completo para seu portfólio com as tecnologias mais demandadas do mercado*
+## Tópicos
 
-## Realização
-[DevSuperior - Escola de programação](https://devsuperior.com.br)
-
-[![DevSuperior no Instagram](https://raw.githubusercontent.com/devsuperior/bds-assets/main/ds/ig-icon.png)](https://instagram.com/devsuperior.ig)
-[![DevSuperior no Youtube](https://raw.githubusercontent.com/devsuperior/bds-assets/main/ds/yt-icon.png)](https://youtube.com/devsuperior)
-
-## Objetivos do projeto para esta aula
 - Implementar o back end
 - Acesso a banco de dados
 - Criar endpoints da API REST
 - Integração com SMS
 - Implantação na nuvem
-
-## AVISO: as aulas ficarão disponíveis somente até domingo às 23h59
 
 ## Checklist
 
@@ -23,7 +13,7 @@
 - Postman (Vídeo: https://youtu.be/CWKLVapcnCU )
 - Heroku CLI (Vídeo: https://youtu.be/70LUh5KNaEk )
 
-## Passo: configuração de segurança
+## Configuração de segurança
 
 ```java
 import java.util.Arrays;
@@ -44,7 +34,7 @@ public class SecurityConfig {
 
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		
+
 		http.headers().frameOptions().disable();
 		http.cors().and().csrf().disable();
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
@@ -63,9 +53,8 @@ public class SecurityConfig {
 	}
 }
 ```
-- **COMMIT: Security config**
 
-### Passo: banco de dados
+### Banco de Dados
 
 - Criar entidade Sale
 - Fazer mapeamento objeto-relacional (JPA)
@@ -73,6 +62,7 @@ public class SecurityConfig {
 - Fazer seed do banco de dados
 
 #### application.properties
+
 ```
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.username=sa
@@ -86,6 +76,7 @@ spring.jpa.properties.hibernate.format_sql=true
 ```
 
 #### import.sql
+
 ```sql
 INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Barry Allen',121,67,18196.0,'2022-06-16');
 INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Logan',26,14,4255.0,'2022-06-14');
@@ -206,17 +197,13 @@ INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Anakin',84,
 INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Padme',79,68,11976.0,'2021-06-27');
 ```
 
-- **COMMIT: Database**
-
-### Passo: Primeiro teste de endpoint da API REST
+### Primeiro teste de endpoint da API REST
 
 - Criar repository
 - Criar service
 - Criar controller
 
-- **COMMIT: API test**
-
-### Passo: Consulta por data
+### Consulta por data
 
 Consulta customizada:
 
@@ -225,12 +212,10 @@ Consulta customizada:
 Page<Sale> findSales(LocalDate min, LocalDate max, Pageable pageable);
 ```
 
-- **COMMIT: Date select**
-
-
-### Passo: Envio de SMS
+### Envio de SMS
 
 Dependências Maven do Twilio
+
 ```xml
 <dependency>
 	<groupId>com.twilio.sdk</groupId>
@@ -240,6 +225,7 @@ Dependências Maven do Twilio
 ```
 
 Variáveis de ambiente no application.properties:
+
 ```
 twilio.sid=${TWILIO_SID}
 twilio.key=${TWILIO_KEY}
@@ -248,6 +234,7 @@ twilio.phone.to=${TWILIO_PHONE_TO}
 ```
 
 Classe SmsService:
+
 ```java
 @Service
 public class SmsService {
@@ -278,12 +265,10 @@ public class SmsService {
 }
 ```
 
-- **COMMIT: Twilio SMS**
-
-
-### Passo: Implantação no Heroku
+### Implantação no Heroku
 
 Arquivo `system.properties`
+
 ```
 java.runtime.version=17
 ```
@@ -302,16 +287,3 @@ heroku git:remote -a <nome-do-app>
 git remote -v
 git subtree push --prefix backend heroku main
 ```
-
-
-## PARABÉNS!
-
-![Parabéns!](https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/trophy.png)
-
-- Quero muito saber seu feedback
-  - O que você está achando da nossa abordagem?
-  - Você está conseguindo acompanhar?
-  - O que você está achando do evento?
-- Participe
-  - Comente na página da Semana Spring React
-  - Divulgue seu projeto no Linkedin e marque a DevSuperior
