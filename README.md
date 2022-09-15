@@ -108,7 +108,7 @@ const date = new Date(new Date().setDate(new Date().getDate() - 365));
     }
     ```
 
-<details>
+</details>
 
 ## Banco de Dados
 
