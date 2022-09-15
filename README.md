@@ -1,8 +1,6 @@
-## Criação backend e frontend
+# Criação backend e frontend
 
-# Checklist
-
-# Ferramentas
+## Ferramentas
 
 - Nodejs 16 e Yarn (vídeo: https://youtu.be/x5tgFTS-CYA )
 - STS (vídeo: https://youtu.be/TGQ0K9QsX88 )
